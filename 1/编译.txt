@@ -1,0 +1,6 @@
+#protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
+
+protoc -I=. --cpp_out=.  lm.Message.proto
+g++ lm.helloworld.pb.cc  Writer.cc -o Write `pkg-config --cflags --libs protobuf`
+
+g++ lm.helloworld.pb.cc  Reader.cc -o Reader `pkg-config --cflags --libs protobuf`
