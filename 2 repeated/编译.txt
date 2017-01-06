@@ -1,0 +1,1 @@
+g++ repeated.Person.pb.cc repeated.cpp -o rep `pkg-config --cflags --libs protobuf`
