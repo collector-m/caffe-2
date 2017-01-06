@@ -1,0 +1,7 @@
+ protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
+
+g++ addressbook.pb.cc write.cpp -o write `pkg-config --cflags --libs protobuf` 
+
+g++ addressbook.pb.cc read.cpp -o read `pkg-config --cflags --libs protobuf`
+
+
