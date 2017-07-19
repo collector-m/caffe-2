@@ -1,0 +1,8 @@
+指南：http://blog.csdn.net/cchd0001/article/details/50669079
+http://blog.csdn.net/zxhoo/article/details/53228303
+注意 1 到 15 标签在编码的时候仅占用1 byte ，16 - 2047 占用 2 byte 。
+因此你应该将 1 - 15 标签保留给最经常被使用的消息元素。另外为未来可能添加的常用元素预留位子。
+由于历史原因， repeated字段的标量编码效率没有应有的效率高，新的代码可以使用[packet=true]来获得更高效的编码
+对于C++，编译器对每个.proto文件生成一个.h和一个.cc文件。 每个消息生成一个class。
+
+protoc caffe.proto --cpp_out=./

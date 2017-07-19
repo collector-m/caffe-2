@@ -1,0 +1,10 @@
+void test_mt19937()
+{
+// 以时间为种子创建一个随机数发生器
+boost::mt19937 rng(time(0));
+auto a = rng();
+for (int i = 0; i < 100; ++i)
+{
+std::cout << rng() << std::endl;
+}
+}
